@@ -136,34 +136,67 @@
     <nav class="bg-brand-blue text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-14">
-                <!-- Mobile Brand Header -->
-                <div class="md:hidden flex items-center gap-2">
-                    <span class="font-black text-lg tracking-tight">MH PHONE CARE</span>
+                
+                <!-- Mobile Brand Header & Hamburger Toggle -->
+                <div class="flex items-center justify-between w-full md:w-auto">
+                    <span class="font-black text-lg tracking-tight block md:hidden lg:block">MH PHONE CARE</span>
+
+                    <!-- Hamburger Button (Visible only on mobile) -->
+                    <button id="mobile-menu-btn" 
+                            type="button" 
+                            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition"
+                            aria-controls="mobile-menu" 
+                            aria-expanded="false"
+                            aria-label="Toggle navigation menu">
+                        <!-- Icon when menu is closed -->
+                        <i id="menu-icon-open" class="fa-solid fa-bars text-xl"></i>
+                        <!-- Icon when menu is open -->
+                        <i id="menu-icon-close" class="fa-solid fa-xmark text-xl hidden"></i>
+                    </button>
                 </div>
 
-                <!-- Navigation Links -->
+                <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex items-center space-x-1 font-medium text-sm">
-                    <a href="#home" class="px-4 py-2 rounded-md bg-white/10 font-semibold text-white transition">Home</a>
-                    <a href="#about" class="px-4 py-2 rounded-md hover:bg-white/10 transition">About</a>
-                    <a href="#services" class="px-4 py-2 rounded-md hover:bg-white/10 transition">Repair Services</a>
-                    <a href="#parts" class="px-4 py-2 rounded-md hover:bg-white/10 transition">Mobile Parts</a>
-                    <a href="#used-phones" class="px-4 py-2 rounded-md hover:bg-white/10 transition">Buy Used Phone</a>
-                    <a href="#training" class="px-4 py-2 rounded-md hover:bg-white/10 transition">Training</a>
-                    <a href="#gallery" class="px-4 py-2 rounded-md hover:bg-white/10 transition">Gallery</a>
-                    <a href="#contact" class="px-4 py-2 rounded-md hover:bg-white/10 transition">Contact</a>
+                    <a href="#home" class="px-3 py-2 rounded-md bg-white/10 font-semibold text-white transition">Home</a>
+                    <a href="#about" class="px-3 py-2 rounded-md hover:bg-white/10 transition">About</a>
+                    <a href="#services" class="px-3 py-2 rounded-md hover:bg-white/10 transition">Repair Services</a>
+                    <a href="#parts" class="px-3 py-2 rounded-md hover:bg-white/10 transition">Mobile Parts</a>
+                    <a href="#used-phones" class="px-3 py-2 rounded-md hover:bg-white/10 transition">Buy Used Phone</a>
+                    <a href="#training" class="px-3 py-2 rounded-md hover:bg-white/10 transition">Training</a>
+                    <a href="#gallery" class="px-3 py-2 rounded-md hover:bg-white/10 transition">Gallery</a>
+                    <a href="#contact" class="px-3 py-2 rounded-md hover:bg-white/10 transition">Contact</a>
                 </div>
 
-                <!-- Right Utility CTA -->
-                <div class="flex items-center gap-3">
-                    <a href="https://wa.me/8801352746946" target="_blank" class="bg-brand-accent hover:bg-green-600 text-white px-3.5 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition">
+                <!-- Desktop Right Utility CTA -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://wa.me/8801352746946" target="_blank" rel="noopener noreferrer" class="bg-brand-accent hover:bg-green-600 text-white px-3.5 py-1.5 rounded-md text-xs font-bold flex items-center gap-1.5 transition">
                         <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
                     </a>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkBlue border-t border-white/10 px-4 pt-3 pb-5 space-y-1">
+            <a href="#home" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-semibold bg-white/10 text-white transition">Home</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium hover:bg-white/10 text-white/90 hover:text-white transition">About</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium hover:bg-white/10 text-white/90 hover:text-white transition">Repair Services</a>
+            <a href="#parts" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium hover:bg-white/10 text-white/90 hover:text-white transition">Mobile Parts</a>
+            <a href="#used-phones" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium hover:bg-white/10 text-white/90 hover:text-white transition">Buy Used Phone</a>
+            <a href="#training" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium hover:bg-white/10 text-white/90 hover:text-white transition">Training</a>
+            <a href="#gallery" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium hover:bg-white/10 text-white/90 hover:text-white transition">Gallery</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium hover:bg-white/10 text-white/90 hover:text-white transition">Contact</a>
+            
+            <!-- Mobile WhatsApp CTA Button -->
+            <div class="pt-3 border-t border-white/10 mt-2">
+                <a href="https://wa.me/8801352746946" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-accent hover:bg-green-600 text-white py-2.5 rounded-md text-sm font-bold flex items-center justify-center gap-2 transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
     </nav>
 
-<!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="relative bg-brand-navy text-white overflow-hidden py-10 md:py-16">
         
         <!-- Background Image Container (Full Image Visible / Uncropped) -->
@@ -647,6 +680,38 @@
             </div>
         </div>
     </footer>
+    <!-- JavaScript to toggle hamburger menu (Place before </body> tag) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
+            function toggleMenu() {
+                const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                
+                // Toggle visibility
+                mobileMenu.classList.toggle('hidden');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                
+                // Update ARIA state
+                menuBtn.setAttribute('aria-expanded', !isExpanded);
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+
+            // Auto-close mobile menu when a navigation link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
